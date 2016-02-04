@@ -1,0 +1,56 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.experiment.reactiveclick"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.0'
+
+//    compile 'io.reactivex:rxjava:1.0.14'
+//    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.netflix.rxjava:rxjava-core:0.+'
+    compile 'com.netflix.rxjava:rxjava-android:0.+'
+}
+
+retrolambda {
+//    jdk '/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home'
+//    println("***************** ---------- *******************")
+//    println("JAVA_HOME: " + System.getenv("JAVA_HOME"))
+//    println("JAVA7_HOME: " + System.getenv("JAVA7_HOME"))
+    println("JAVA8_HOME: " + System.getenv("JAVA8_HOME"))
+//    println("***************** ---------- *******************")
+}

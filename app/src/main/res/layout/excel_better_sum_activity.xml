@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/excel_sum_editor_a"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:hint="Enter a"
+            android:inputType="number"
+            android:background="#f5f5f5"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cccccc"/>
+
+        <EditText
+            android:id="@+id/excel_sum_editor_b"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical"
+            android:hint="Enter b"
+            android:inputType="number"
+            android:background="#f5f5f5"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/excel_sum_count_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="100dp"
+        android:gravity="center_horizontal"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:textSize="50dp"
+        android:text="0"
+        />
+</LinearLayout>
